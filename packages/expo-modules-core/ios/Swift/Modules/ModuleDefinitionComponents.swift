@@ -204,4 +204,11 @@ extension AnyModule {
   public func onAppEntersBackground(_ closure: @escaping () -> Void) -> AnyDefinition {
     return EventListener(.appEntersBackground, closure)
   }
+
+  /**
+   Defines the factory creating a native view when the module is used as a view.
+   */
+  public func view(_ closure: @escaping () -> UIView) -> AnyDefinition {
+    return ViewFactory(closure)
+  }
 }

@@ -57,4 +57,22 @@ public class SwiftInteropBridge: NSObject {
       acc[holder.name] = holder.definition.constants
     }
   }
+
+  @objc
+  public func exportedViewManagersNames() -> [String] {
+    return registry.compactMap { holder in
+      return holder.definition.viewFactory != nil ? "ExpoLinearGradient" : nil
+    }
+  }
+
+  @objc
+  public func getViewManagers() -> [ViewModuleWrapper] {
+    return registry.compactMap { holder in
+      if holder.definition.viewFactory != nil {
+        return ViewModuleWrapper(holder)
+      } else {
+        return nil
+      }
+    }
+  }
 }

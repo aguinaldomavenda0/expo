@@ -11,7 +11,7 @@ import TerminalBlock from '~/components/plugins/TerminalBlock';
 
 If you are already experienced with React and JavaScript tooling and want to dive right in and figure things out as you go, this is the quickest way to get started:
 
-<TerminalBlock cmd={['# Install the command line tools', 'npm install --global expo-cli','', '# Create a new project', 'expo init my-project']} />
+<TerminalBlock cmd={['# Install the command line tools', 'npm install --global expo-cli','Or use','yarn add global expo','', '# Create a new project', 'expo init my-project']} />
 
 ## Slow start
 
